@@ -3317,7 +3317,7 @@ footer .footer_bottom p {
   transition: var(--transition_base);
 }
 
-.red_hover i:hover {
+.green_hover i:hover {
   color: var(--primary-color);
 }
 
