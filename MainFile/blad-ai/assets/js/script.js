@@ -1,28 +1,35 @@
 (function ($) {
 
-    /*
-        1. Data Background Function
-        2. Scroll top button
-        3. Offcanvus toggle
-        4. Theme Slider Functions
-        5. Pricing Range Slider
-        6. Nice Select
-        7. Checkout Toggle
-        8. Header Sticky
-        9. Mobile Menu
-        10. Header Search 
-        11. Preloader
-        12. Fancybox
-        13. Countdown
-        14. Cart Drawer
-        15. Wow Js
-        16. Count Down
-        17. Accordion Boxs
-    */
+    $(document).ready(function() {
+        console.log("Document ready - initializing sliders");
+        
+        // Show debug info immediately
+        $("#debug-info").show();
+        $("#slider-status").text("Document ready - starting initialization");
 
-    //fancy box video popup 
-    Fancybox.bind("[data-fancybox]", {
-    });
+        /*
+            1. Data Background Function
+            2. Scroll top button
+            3. Offcanvus toggle
+            4. Theme Slider Functions
+            5. Pricing Range Slider
+            6. Nice Select
+            7. Checkout Toggle
+            8. Header Sticky
+            9. Mobile Menu
+            10. Header Search 
+            11. Preloader
+            12. Fancybox
+            13. Countdown
+            14. Cart Drawer
+            15. Wow Js
+            16. Count Down
+            17. Accordion Boxs
+        */
+
+        //fancy box video popup 
+        Fancybox.bind("[data-fancybox]", {
+        });
 
 
     $(".campaign_slider").slick({
@@ -81,6 +88,30 @@
         speed: 800,
         fade: true,
     });
+
+    // Initialize hm2_hero_slider with error handling
+    try {
+        $(".hm2_hero_slider").slick({
+            autoplay: true,
+            slidesToShow: 1,
+            prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button class="next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+            speed: 800,
+            fade: true,
+            dots: true,
+            infinite: true,
+        });
+        console.log("hm2_hero_slider initialized successfully");
+        
+        // Show debug info
+        $("#debug-info").show();
+        $("#slider-status").text("Slider status: Initialized successfully");
+        
+    } catch (error) {
+        console.error("Error initializing hm2_hero_slider:", error);
+        $("#debug-info").show();
+        $("#slider-status").text("Slider status: Error - " + error.message);
+    }
 
 
     $(".gallary_slider").slick({
@@ -168,10 +199,15 @@
     $('.nice_select').niceSelect();
 
 
-    // Preloader
+    // Preloader with fallback
     setTimeout(() => {
         $('.preloader').fadeOut()
-    }, 1000);
+    }, 2000);
+    
+    // Fallback preloader removal after 5 seconds
+    setTimeout(() => {
+        $('.preloader').fadeOut()
+    }, 5000);
 
 
 
@@ -228,6 +264,7 @@
         });
     });
 
+    }); // Close document ready function
 
 })(jQuery);
 

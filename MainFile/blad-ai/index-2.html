@@ -338,60 +338,86 @@
     <!-- header end -->
 
     <!-- hero section start -->
-      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <section class="hm1_hero_slider hm2_hero_slider">
-      <!-- here's some error in the hero section -->
-       
-      <div class="hm1_hero hm2_hero hm21 hm_bg">
-        
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-9 col-md-11 col-12">
-              <div class="hm2_content text-center">
-                <h1 style="color: aliceblue">Donate Blood,Share Life.</h1>
-                <h2 style="color: aliceblue">Be a blood donor.Be a life-saver.</h2>
-                <a href="donate.html" class="explore_now red_btn"
-                  >Explore More</a
-                >
-                <a href="contact.html" class="explore_now black_btn"
-                  >Contact Now</a
-                >
+    <section class="hm1_hero_slider hm2_hero_slider" style="position: relative; z-index: 1;">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" style="height: 480px; overflow: hidden;">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="hm1_hero hm2_hero hm21 hm_bg" style="background-image: url('assets/images/index2/hm1.png'); background-size: cover; background-position: center; height: 480px; display: flex; align-items: center; justify-content: center;">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-9 col-lg-9 col-md-11 col-12">
+                                    <div class="hm2_content text-center" style="padding-top: 10px;">
+                  <h1 style="color: aliceblue">Donate Blood, Share Life</h1>
+                  <h2 style="color: aliceblue">Your Blood Can Bring Smile On Any one Person Face</h2>
+                  <a href="donate.html" class="explore_now red_btn">Explore More</a>
+                  <a href="contact.html" class="explore_now black_btn">Contact Now</a>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="hm1_hero hm2_hero hm22 hm_bg" style="background-image: url('assets/images/index2/hm2.png'); background-size: cover; background-position: center; height: 480px; display: flex; align-items: center; justify-content: center; margin-top: -100px;">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-9 col-lg-9 col-md-11 col-12">
+                                    <div class="hm2_content text-center" style="padding-top: 10px;">
+                  <h1 style="color: aliceblue">Save Lives Through Blood Donation</h1>
+                  <h2 style="color: aliceblue">Every Drop Counts - Be a Hero Today</h2>
+                  <a href="donate.html" class="explore_now red_btn">Donate Now</a>
+                  <a href="register.html" class="explore_now black_btn">Register</a>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="hm1_hero hm2_hero hm23 hm_bg" style="background-image: url('assets/images/index2/hm3.png'); background-size: cover; background-position: center; height: 480px; display: flex; align-items: center; justify-content: center;">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-xl-9 col-lg-9 col-md-11 col-12">
+                                    <div class="hm2_content text-center" style="padding-top: 10px;">
+                  <h1 style="color: aliceblue">Connect Donors with Recipients</h1>
+                  <h2 style="color: aliceblue">Making Blood Donation Fast and Reliable</h2>
+                  <a href="donate.html" class="explore_now red_btn">Learn More</a>
+                  <a href="contact.html" class="explore_now black_btn">Get Help</a>
+                </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="hm1_hero hm2_hero hm23 hm_bg">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-9 col-md-11 col-12">
-              <div class="hm2_content text-center">
-                <h1 style="color: aliceblue">Donate Blood, Share Life</h1>
-                <h2 style="color: aliceblue">Your Blood Can Bring Smile On Any one Person Face</h2>
-                <a href="donate.html" class="explore_now red_btn"
-                  >Explore More</a
-                >
-                <a href="contact.html" class="explore_now black_btn"
-                  >Contact Now</a
-                >
-              </div>
-            </div>
-          </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
       </div>
     </section>
     <!-- hero section end -->
 
     <!-- register & donate start -->
-    <section class="register_donate gray_bg ptb-115">
+    <section class="register_donate gray_bg ptb-115" style="position: relative; z-index: 2; margin-top: 90px;">
       <div class="container">
         <div class="row g-0 register_top">
           <div class="col-xl-6 col-lg-6 col-12">
