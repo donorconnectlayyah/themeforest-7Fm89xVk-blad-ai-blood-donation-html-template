@@ -12,7 +12,7 @@
   background-position: center;
   padding: 240px 0;
   &.hm21 {
-    background: url("../images/hm2.jpg") no-repeat;
+    background: url("../images/hero1.jpg") no-repeat;
   }
   &.hm22 {
     background: url("../images/hm1.png") no-repeat;
@@ -30,6 +30,11 @@
     background: #00000082;
     z-index: -1;
   }
+}
+
+.hm2_hero.hm21 {
+  background: url('../../assets/index/index-2/campaign gallery1.png') no-repeat center center;
+  background-size: cover;
 }
 
 .hm2_content {
