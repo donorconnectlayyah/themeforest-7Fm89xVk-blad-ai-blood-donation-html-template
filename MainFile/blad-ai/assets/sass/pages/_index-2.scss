@@ -122,7 +122,7 @@
   &:hover {
     .p_content_left {
       background: var(--primary-color);
-      box-shadow: 0px 0px 30px #ff000061;
+      box-shadow: 0px 0px 30px #00ff0061;
       &::after {
         background: var(--primary-color);
       }
@@ -134,7 +134,7 @@
       }
     }
     .progress_number {
-      box-shadow: 0px 0px 30px #ff000061;
+      box-shadow: 0px 0px 30px #00ff0061;
       background: var(--primary-color);
       color: white;
     }
