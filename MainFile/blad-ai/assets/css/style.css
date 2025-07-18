@@ -6203,3 +6203,7 @@ footer .footer_bottom p {
   color: #fff !important;
   border-color: #ea062b !important;
 }
+
+.header_logo img {
+  background: #fff !important;
+}
