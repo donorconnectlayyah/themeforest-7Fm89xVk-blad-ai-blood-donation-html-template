@@ -6207,3 +6207,31 @@ footer .footer_bottom p {
 .header_logo img {
   background: #fff !important;
 }
+
+/* Button hover effect: background turns green with transition */
+.btn:hover,
+.red_btn:hover,
+.black_btn:hover,
+.explore_now:hover,
+button:hover {
+  background: #28a745 !important; /* Bootstrap green or adjust as needed */
+  transition: background 0.3s, color 0.3s;
+  color: #fff !important;
+}
+
+/* Add border between blog sections */
+.km__blog__details {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.km__blog__details:last-of-type {
+  border-bottom: none;
+}
+
+/* Fix for .black_btn:hover to ensure it turns black, not green */
+.black_btn:hover {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
