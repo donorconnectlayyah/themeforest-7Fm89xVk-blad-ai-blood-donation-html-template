@@ -192,7 +192,19 @@
 }
 
 .progress-chart.loaded .progress-header .progress-percentage {
-  animation: countUp 0.5s ease-out;
+  animation: countUp 0.8s ease-out;
+  color: #28a745;
+  font-weight: 700;
+}
+
+/* Ensure percentage numbers are always visible */
+.progress-chart .progress-header .progress-percentage {
+  min-width: 45px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: #28a745;
+  transition: all 0.3s ease;
 }
 
 .progress-chart .progress-bar {
@@ -206,7 +218,7 @@
   height: 100%;
   background: linear-gradient(90deg, #28a745, #20c997);
   border-radius: 4px;
-  transition: width 2s ease;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   width: 0%; /* Start at 0% */
 }
 
@@ -240,7 +252,7 @@
 }
 
 .progress-chart.loaded .progress-bar .progress-fill {
-  animation: progressPulse 2s ease-in-out;
+  animation: progressPulse 1s ease-in-out;
 }
 
 /* Statistics Cards */

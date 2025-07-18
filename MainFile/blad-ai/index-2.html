@@ -215,42 +215,11 @@
       </section>
       <!-- help the people end -->
 
-      <!-- counter start -->
-      <div class="km__counterup___section">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4 mb-xl-0 mb-lg-0 mb-md-0">
-              <ul class="km__counterup___box text-center">
-                <li class="h1 counter mb-30"><span class="count">25</span></li>
-                <li class="counter__content">Years of Experience</li>
-              </ul>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4 mb-xl-0 mb-lg-0 mb-md-0">
-              <ul class="km__counterup___box text-center">
-                <li class="h1 counter mb-30"><span class="count">430</span></li>
-                <li class="counter__content">Blood Donations</li>
-              </ul>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4 mb-xl-0 mb-lg-0 mb-md-0">
-              <ul class="km__counterup___box text-center">
-                <li class="h1 counter mb-30"><span class="count">90</span></li>
-                <li class="counter__content">Total Awards</li>
-              </ul>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-              <ul class="km__counterup___box text-center">
-                <li class="h1 counter mb-30"><span class="count">35</span></li>
-                <li class="counter__content">Blood Cooperations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- counter end -->
+
 
       <!-- Score Charts Section -->
       <section class="score-charts-section">
-        <div class="container">
+        <div class="contaihotner">
           <div class="row mb-5">
             <div class="col-12">
               <div class="common_title text-center">
@@ -1061,34 +1030,34 @@
         const progressCharts = document.querySelectorAll('.progress-chart');
         
         const observerOptions = {
-          threshold: 0.5, // Trigger when 50% of element is visible
-          rootMargin: '0px 0px -50px 0px' // Trigger slightly before element comes into view
+          threshold: 0.1, // Trigger when 10% of element is visible
+          rootMargin: '0px 0px -100px 0px' // Trigger earlier when scrolling
         };
         
-        const progressObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('loaded');
-              
-              // Animate percentage counter
-              const percentageElement = entry.target.querySelector('.progress-percentage');
-              const targetPercentage = parseInt(percentageElement.textContent);
-              let currentPercentage = 0;
-              
-              const counterInterval = setInterval(() => {
-                currentPercentage += Math.ceil(targetPercentage / 20); // Increment by 5% of target
-                if (currentPercentage >= targetPercentage) {
-                  currentPercentage = targetPercentage;
-                  clearInterval(counterInterval);
-                }
-                percentageElement.textContent = currentPercentage + '%';
-              }, 100); // Update every 100ms
-              
-              // Once loaded, stop observing
-              progressObserver.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
+              const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            
+            // Animate percentage counter
+            const percentageElement = entry.target.querySelector('.progress-percentage');
+            const targetPercentage = parseInt(percentageElement.textContent);
+            let currentPercentage = 0;
+            
+            const counterInterval = setInterval(() => {
+              currentPercentage += 1; // Increment by 1 for smooth counting
+              if (currentPercentage >= targetPercentage) {
+                currentPercentage = targetPercentage;
+                clearInterval(counterInterval);
+              }
+              percentageElement.textContent = currentPercentage + '%';
+            }, 20); // Update every 20ms for smoother animation
+            
+            // Once loaded, stop observing
+            progressObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
         
         // Start observing all progress charts
         progressCharts.forEach(chart => {
