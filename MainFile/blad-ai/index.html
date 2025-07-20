@@ -21,6 +21,62 @@
   <link rel="stylesheet" href="assets/css/fancybox.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom-styles.css" />
+  
+  <!-- Google Fonts for Urdu Support -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Animated Urdu Text Styles -->
+  <style>
+    .animated-urdu-text {
+      color: #ffd700 !important;
+      text-shadow: 
+        0 0 10px rgba(220, 53, 69, 0.8),
+        0 0 20px rgba(220, 53, 69, 0.6),
+        0 0 30px rgba(220, 53, 69, 0.4),
+        0 0 40px rgba(220, 53, 69, 0.2),
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        4px 4px 8px rgba(0, 0, 0, 0.6) !important;
+      animation: glowPulse 2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 15px rgba(220, 53, 69, 0.5));
+      line-height: 2.2 !important;
+      word-spacing: 0.3em !important;
+      letter-spacing: 0.1em !important;
+    }
+    
+    @keyframes glowPulse {
+      0% {
+        text-shadow: 
+          0 0 10px rgba(220, 53, 69, 0.8),
+          0 0 20px rgba(220, 53, 69, 0.6),
+          0 0 30px rgba(220, 53, 69, 0.4),
+          2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+      }
+      100% {
+        text-shadow: 
+          0 0 20px rgba(220, 53, 69, 1),
+          0 0 30px rgba(220, 53, 69, 0.8),
+          0 0 40px rgba(220, 53, 69, 0.6),
+          0 0 50px rgba(220, 53, 69, 0.4),
+          2px 2px 4px rgba(0, 0, 0, 0.8),
+          4px 4px 8px rgba(0, 0, 0, 0.6) !important;
+      }
+    }
+    
+    /* Enhanced typewriter cursor animation */
+    .typewriter-cursor {
+      color: #ffd700;
+      text-shadow: 
+        0 0 10px rgba(220, 53, 69, 0.8),
+        0 0 20px rgba(220, 53, 69, 0.6);
+      animation: blink 1s infinite;
+      font-weight: bold;
+    }
+    
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
 </head>
 
 <body>
@@ -59,8 +115,8 @@
               <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8 col-md-10 col-12 text-center">
                   <div class="hero-content" style="position: relative; z-index: 2;">
-                    <h1 class="hero-title" style="color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                      <span class="typewriter-text" data-text="Connect Donors & Recipients Instantly">Connect Donors & <span style="color: #ffd700;">Recipients Instantly</span></span>
+                    <h1 class="hero-title animated-urdu-text" style="font-size: 1.8rem; font-weight: 700; line-height: 1.6; margin-bottom: 1rem; font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; letter-spacing: 1px;">
+                      <span class="typewriter-text" data-text="جس نے بھی کسی ایک انسان کی جان بچائی<br>گویا اس نے پوری انسانیت کی جان بچائی">جس نے بھی کسی ایک انسان کی جان بچائی<br>گویا اس نے پوری انسانیت کی جان بچائی</span>
                       <span class="typewriter-cursor">|</span>
                     </h1>
                     
@@ -90,8 +146,8 @@
               <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8 col-md-10 col-12 text-center">
                   <div class="hero-content" style="position: relative; z-index: 2;">
-                    <h1 class="hero-title" style="color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                      <span class="typewriter-text" data-text="Emergency Blood Donation Solution">Emergency Blood <span style="color: #ffd700;">Donation Solution</span></span>
+                    <h1 class="hero-title animated-urdu-text" style="font-size: 1.8rem; font-weight: 700; line-height: 1.6; margin-bottom: 1rem; font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; letter-spacing: 1px;">
+                      <span class="typewriter-text" data-text="آپ کا ایک قطرہ خون، کسی کے لیے زندگی کی آخری امید ہو سکتا ہے">آپ کا ایک قطرہ خون، کسی کے لیے زندگی کی آخری امید ہو سکتا ہے</span>
                       <span class="typewriter-cursor">|</span>
                     </h1>
                     
@@ -121,14 +177,10 @@
               <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8 col-md-10 col-12 text-center">
                   <div class="hero-content" style="position: relative; z-index: 2;">
-                    <h1 class="hero-title" style="color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                      <span class="typewriter-text" data-text="User-Friendly Blood Donation Platform">User-Friendly Blood <span style="color: #ffd700;">Donation Platform</span></span>
+                    <h1 class="hero-title animated-urdu-text" style="font-size: 1.8rem; font-weight: 700; line-height: 1.6; margin-bottom: 1rem; font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; letter-spacing: 1px;">
+                      <span class="typewriter-text" data-text="ایک قدم انسانیت کی طرف، ایک نئی زندگی کسی کے لیے">ایک قدم انسانیت کی طرف، ایک نئی زندگی کسی کے لیے</span>
                       <span class="typewriter-cursor">|</span>
                     </h1>
-                    
-                    <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.5rem; font-weight: 400; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
-                      Email, SMS & WhatsApp Integration
-                    </p>
                     
                     <div class="hero-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                       <a href="about.html" class="btn btn-primary btn-lg" style="background: #ffc107; border: none; padding: 10px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; text-decoration: none; color: #333; transition: all 0.3s ease;">
