@@ -23,6 +23,7 @@ from main.urls import user
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls.user')),
+    path('', include('main.urls.role')),
 ]
 
 # Serve media files during development
